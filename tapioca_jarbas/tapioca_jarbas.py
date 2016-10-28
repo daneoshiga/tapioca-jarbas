@@ -1,5 +1,3 @@
-# coding: utf-8
-
 from tapioca import (
     TapiocaAdapter, generate_wrapper_from_adapter, JSONAdapterMixin)
 
@@ -14,8 +12,6 @@ class JarbasClientAdapter(JSONAdapterMixin, TapiocaAdapter):
     def get_request_kwargs(self, api_params, *args, **kwargs):
         params = super(JarbasClientAdapter, self).get_request_kwargs(
             api_params, *args, **kwargs)
-
-        
 
         return params
 
