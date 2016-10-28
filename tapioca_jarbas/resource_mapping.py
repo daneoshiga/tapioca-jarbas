@@ -1,6 +1,10 @@
 RESOURCE_MAPPING = {
-    'resource_name': {
-        'resource': 'resource_url',
-        'docs': 'http://www.documentation.com/link/to/resource/documentation'
+    'document': {
+        'resource': 'document/',
+        'docs': 'https://github.com/datasciencebr/jarbas#get-apidocument'
+    },
+    'receipt': {
+        'resource': 'receipt/{document_pk}',
+        'docs': 'https://github.com/datasciencebr/jarbas#get-apireceiptdocumentpk'
     },
 }
