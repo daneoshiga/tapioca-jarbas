@@ -16,11 +16,16 @@ class JarbasClientAdapter(JSONAdapterMixin, TapiocaAdapter):
         return params
 
     def get_iterator_list(self, response_data):
-        return response_data
+        return response_data.get('results', response_data)
 
     def get_iterator_next_request_kwargs(self, iterator_request_kwargs,
                                          response_data, response):
-        pass
+        next_url = response_data.get('next', '')
+        if not next_url:
+            return
+
+        iterator_request_kwargs['url'] = next_url
+        return iterator_request_kwargs
 
 
 Jarbas = generate_wrapper_from_adapter(JarbasClientAdapter)
