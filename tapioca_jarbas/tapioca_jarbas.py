@@ -5,15 +5,15 @@ from tapioca import (
 from .resource_mapping import RESOURCE_MAPPING
 
 
+class JarbasAdapterMixin(JSONAdapterMixin):
+    def response_to_native(self, response):
+        response = super().response_to_native(response)
+        return response['results']
+
+
 class JarbasClientAdapter(JSONAdapterMixin, TapiocaAdapter):
     api_root = 'http://jarbas.datasciencebr.com/api/'
     resource_mapping = RESOURCE_MAPPING
-
-    def get_request_kwargs(self, api_params, *args, **kwargs):
-        params = super(JarbasClientAdapter, self).get_request_kwargs(
-            api_params, *args, **kwargs)
-
-        return params
 
     def get_iterator_list(self, response_data):
         return response_data.get('results', response_data)
