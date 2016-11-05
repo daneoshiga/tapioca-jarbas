@@ -19,6 +19,7 @@ class JarbasClientAdapter(JSONAdapterMixin, TapiocaAdapter):
             return
 
         iterator_request_kwargs['url'] = next_url
+        iterator_request_kwargs.pop('params', None)  # these are sent in the next_url
         return iterator_request_kwargs
 
 
