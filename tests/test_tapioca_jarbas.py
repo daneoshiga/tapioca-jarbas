@@ -1,15 +1,13 @@
-# coding: utf-8
-
-import unittest
+import pytest
 
 from tapioca_jarbas import Jarbas
 
 
-class TestTapiocaJarbas(unittest.TestCase):
+@pytest.fixture
+def wrapper():
+    return Jarbas()
 
-    def setUp(self):
-        self.wrapper = Jarbas()
 
-
-if __name__ == '__main__':
-    unittest.main()
+def test_resource_access(wrapper):
+    resource = wrapper.documents()
+    assert resource.data == 'http://jarbas.datasciencebr.com/api/document/'
