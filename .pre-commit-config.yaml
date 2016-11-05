@@ -2,7 +2,6 @@
   sha: 516cc9fa72ad09699f2c03ffbd0aa7f60d75b59a
   hooks:
     - id: flake8
-      args: ['--ignore=E501,E128,F403']
     - id: trailing-whitespace
     - id: debug-statements
     - id: check-added-large-files
