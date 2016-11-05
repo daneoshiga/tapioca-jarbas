@@ -1,5 +1,5 @@
 RESOURCE_MAPPING = {
-    'document': {
+    'documents': {
         'resource': 'document/',
         'docs': 'https://github.com/datasciencebr/jarbas#get-apidocument'
     },
