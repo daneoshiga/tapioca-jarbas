@@ -7,4 +7,8 @@ RESOURCE_MAPPING = {
         'resource': 'receipt/{document_pk}',
         'docs': 'https://github.com/datasciencebr/jarbas#get-apireceiptdocumentpk'
     },
+    'supplier': {
+        'resource': 'supplier/{cnpj}',
+        'docs': 'https://github.com/datasciencebr/jarbas#get-apisuppliersuppliercnpj'
+    },
 }
