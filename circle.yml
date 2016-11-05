@@ -11,7 +11,7 @@ test:
         - flake8 -v --ignore=E501 tapioca_jarbas/ tests/
 
     override:
-        - py.test -vvv tests --cov tapioca_jarbas--cov-report=term-missing --cov-report=html
+        - py.test -vvv tests --cov tapioca_jarbas --cov-report=term-missing --cov-report=html
 
     post:
       - mv htmlcov/ $CIRCLE_ARTIFACTS
