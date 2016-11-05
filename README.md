@@ -11,6 +11,19 @@ from tapioca_jarbas import Jarbas
 
 
 api = Jarbas()
+result = api.documents().get(params={'state':'SP'})
+result().data
+
+# Example access to supplier endpoint
+cnpj = result().data['results'][2]['cnpj_cpf']
+supplier = api.supplier(cnpj=cnpj).get()
+supplier().data
+
+
+# Example access to receipt endpoint
+document_pk = result().data['results'][2]['id']
+result = api.receipt(document_pk=document_pk).get()
+result().data
 
 ```
 
