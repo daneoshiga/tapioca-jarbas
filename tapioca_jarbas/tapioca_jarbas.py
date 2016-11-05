@@ -5,12 +5,6 @@ from tapioca import (
 from .resource_mapping import RESOURCE_MAPPING
 
 
-class JarbasAdapterMixin(JSONAdapterMixin):
-    def response_to_native(self, response):
-        response = super().response_to_native(response)
-        return response['results']
-
-
 class JarbasClientAdapter(JSONAdapterMixin, TapiocaAdapter):
     api_root = 'http://jarbas.datasciencebr.com/api/'
     resource_mapping = RESOURCE_MAPPING
