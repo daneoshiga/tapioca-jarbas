@@ -1,4 +1,6 @@
 # Tapioca jarbas
+[![CircleCI](https://circleci.com/gh/daneoshiga/tapioca-jarbas.svg?&style=shield)](https://circleci.com/gh/daneoshiga/tapioca-jarbas/)
+[![PyPI version](https://badge.fury.io/py/tapioca-jarbas.svg)](https://badge.fury.io/py/tapioca-jarbas)
 
 ## Installation
 ```
