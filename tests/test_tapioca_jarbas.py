@@ -9,5 +9,5 @@ def wrapper():
 
 
 def test_resource_access(wrapper):
-    resource = wrapper.documents()
-    assert resource.data == 'http://jarbas.datasciencebr.com/api/document/'
+    resource = wrapper.reimbursement_list()
+    assert resource.data == 'http://jarbas.datasciencebr.com/api/reimbursement/'
