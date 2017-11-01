@@ -1,5 +1,6 @@
+repos:
 - repo: git://github.com/pre-commit/pre-commit-hooks
-  sha: 516cc9fa72ad09699f2c03ffbd0aa7f60d75b59a
+  sha: v1.1.1
   hooks:
     - id: flake8
       args: ['--ignore=E501']
@@ -11,6 +12,6 @@
     - id: end-of-file-fixer
 
 - repo: git://github.com/Lucas-C/pre-commit-hooks
-  sha: 1320d84cf315728e6ac6cca83bd80e3c732f53df
+  sha: v1.1.4
   hooks:
     - id: forbid-tabs
