@@ -1,34 +1,30 @@
 RESOURCE_MAPPING = {
     'reimbursement': {
-        'resource': 'reimbursement/{year}/{applicant_id}/{document_id}',
-        'docs': 'https://github.com/datasciencebr/jarbas#get-apireimbursementyearapplicant_iddocument_id',
+        'resource': 'reimbursement/{document_id}/',
+        'docs': 'https://github.com/datasciencebr/jarbas#get-apireimbursementdocument_id',
     },
     'receipt': {
-        'resource': 'reimbursement/{year}/{applicant_id}/{document_id}/receipt',
-        'docs': 'https://github.com/datasciencebr/jarbas#get-apireimbursementyearapplicant_iddocument_idreceipt',
+        'resource': 'reimbursement/{document_id}/receipt/',
+        'docs': 'https://github.com/datasciencebr/jarbas#get-apireimbursementdocument_idreceipt',
     },
     'reimbursement_list': {
         'resource': 'reimbursement/',
         'docs': 'https://github.com/datasciencebr/jarbas#get-apireimbursement',
     },
-    'reimbursement_list_year': {
-        'resource': 'reimbursement/{year}',
-        'docs': 'https://github.com/datasciencebr/jarbas#get-apireimbursementyear',
-    },
-    'reimbursement_list_year_applicant': {
-        'resource': 'reimbursement/{year}/{applicant_id}',
-        'docs': 'https://github.com/datasciencebr/jarbas#get-apireimbursementyearapplicant_id',
+    'reimbursement_same_day': {
+        'resource': 'reimbursement/{document_id}/same_day/',
+        'docs': 'https://github.com/datasciencebr/jarbas#get-apireimbursementdocument_idsame_day',
     },
     'subquota': {
-        'resource': 'subquota',
+        'resource': 'subquota/',
         'docs': 'https://github.com/datasciencebr/jarbas#get-apisubquota',
     },
     'applicant': {
-        'resource': 'applicant',
+        'resource': 'applicant/',
         'docs': 'https://github.com/datasciencebr/jarbas#get-apiapplicant',
     },
     'company': {
-        'resource': 'company/{cnpj}',
+        'resource': 'company/{cnpj}/',
         'docs': 'https://github.com/datasciencebr/jarbas#get-apicompanycnpj',
     },
 }

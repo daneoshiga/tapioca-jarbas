@@ -15,7 +15,7 @@ from tapioca_jarbas import Jarbas
 jarbas = Jarbas()
 
 # Get receipt url
-receipt = jarbas.receipt(year=2016, applicant_id=2398, document_id=5920249).get()
+receipt = jarbas.receipt(document_id=5920249).get()
 receipt().data['url']
 >>> http://www.camara.gov.br/cota-parlamentar/documentos/publ/2398/2016/5920249.pdf'
 

@@ -1,12 +1,11 @@
 from tapioca import (
     TapiocaAdapter, generate_wrapper_from_adapter, JSONAdapterMixin)
 
-
 from .resource_mapping import RESOURCE_MAPPING
 
 
 class JarbasClientAdapter(JSONAdapterMixin, TapiocaAdapter):
-    api_root = 'http://jarbas.datasciencebr.com/api/'
+    api_root = 'https://jarbas.serenatadeamor.org/api/'
     resource_mapping = RESOURCE_MAPPING
 
     def get_iterator_list(self, response_data):
