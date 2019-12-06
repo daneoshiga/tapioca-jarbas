@@ -69,14 +69,14 @@ round(total_net_value, 2)
 # Example pagination
 subquota = jarbas.subquota().get()
 subquota().data['count']
->>> 21
+>>> 22
 
 all_subquotas = [page().data for page in subquota().pages()]
 len(all_subquotas)
->>> 21
+>>> 22
 
 # Example filtering
-filtering = jarbas.reimbursement_list_year(year=2016).get(params={'month': 1})
+filtering = jarbas.reimbursement_list().get(params={'year': 2016, 'month': 1})
 
 # Example search
 applicants = jarbas.applicant().get(params={'q': 'liderança'})

@@ -5,7 +5,7 @@ from .resource_mapping import RESOURCE_MAPPING
 
 
 class JarbasClientAdapter(JSONAdapterMixin, TapiocaAdapter):
-    api_root = 'https://jarbas.serenatadeamor.org/api/'
+    api_root = 'https://jarbas.serenata.ai/api/chamber_of_deputies/'
     resource_mapping = RESOURCE_MAPPING
 
     def get_iterator_list(self, response_data):

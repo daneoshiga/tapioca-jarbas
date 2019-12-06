@@ -10,4 +10,5 @@ def wrapper():
 
 def test_resource_access(wrapper):
     resource = wrapper.reimbursement_list()
-    assert resource.data == 'https://jarbas.serenatadeamor.org/api/reimbursement/'
+    assert resource.data == ('https://jarbas.serenata.ai/api/'
+                             'chamber_of_deputies/reimbursement/')
